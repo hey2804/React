@@ -1,0 +1,75 @@
+1.安裝 create react app(建立專案環境)
+
+1.1 Ctrl + ` 開啟終端機輸入以下指令
+npm i create-react-app   // 電腦第一次安裝react專案才需要
+create-react-app appName     // appName輸入自訂的專案名稱
+
+1.2 安裝完成後會出現以下指令
+We suggest that you begin by typing:
+
+  cd project01
+  npm start
+
+Happy hacking!
+
+1.3 依照出現的指令 1.進入專案資料夾,並 2.啟動
+通常npm start會自動開啟瀏覽器，若沒有自動開啟，則自行在網址列中輸入 localhost:3000
+畫面出現**旋轉的 react logo **就表示成功執行
+
+
+
+2.來看看react專案資料夾的結構
+當執行 create react app 後，資料夾內也會自動產生一些內容如下
+
+build (如果你執行過npm run build)
+>node_modules
+>public
+|____ index.html
+|____ favicon.ico
+|____ manifest.json
+>src
+|____ index.js
+|____ index.css
+|____ App.js
+|____ App.test.js
+|____ App.css
+|____ service-worker.js
+|____ logo.svg
+node_modules
+package.json
+package-lock.json
+README.md
+(.gitignore)
+
+2.0 build
+經preprocessing之後用來部署的檔案，npm run build後出現。
+
+2.1 >node_modules
+所有經由 npm 安裝的 node packages 都在這個資料夾裡，
+基本上不需要修改裡面的內容，node packages 的安裝跟移除都是在 command line 裡面輸入指令處理
+
+2.2 >public
+放打包前html檔的地方，favicon.ico 和 manifest.json 是跟預設的icon有關。
+打開其中的 index.html
+裡面只有一個 id 為 "root" 的 div
+React 會把 src 資料夾內編譯出的內容插入到 root 這個 div 內
+
+2.3 >src
+在preprocessing前的程式碼。
+頁面上真正的內容所在，所有component / css / image 等都會放在該資料夾內
+接下來的多數時間都會在這個資料夾內做編寫
+
+
+3 React運作原理
+
+3.1 React virtual DOM
+
+我們以往在寫網頁時常常直接對DOM操作
+而React特別的地方在，當我們寫React時，是對React自己的DOM操作。
+
+React DOM函式ReactDOM.render()是React的程式進入點，
+正確的說法是React的 virtual DOM 。
+
+什麼是virtual DOM ? 
+React先用js做出一個模擬的DOM，當畫面產生改變，React會把更改的地方放入React的 virtual DOM，
+和原本的DOM比較後，再去更改DOM上「必須更改的地方」。
