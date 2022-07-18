@@ -1,0 +1,59 @@
+/* Document */
+body{
+    box-sizing: border-box;
+    width: 30vw;
+    margin: 5% auto;   /* 置中對齊 */
+    padding: 3%;
+    padding-top: 2%;
+    border: 1px solid gainsboro;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+}
+
+/* Edit區塊 */
+.edit{
+    border: 1px solid red;
+}
+.edit h1{
+    margin: 0;
+}
+.edit p{
+    margin: 0;
+    margin-top: 10px;
+    padding: 0;
+}
+.edit input{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+.btnAdd{
+    width: 100%;
+    margin-top: 15px;
+    padding: 5px;
+    background-color: green;
+    color: white;
+    border: 0;
+    cursor: pointer;
+}
+
+/* Info區塊 */
+.info{
+    /* border: 1px solid blue; */
+    margin-top: 20px;
+    position: relative;
+}
+.item{
+    width: 100%;
+    border-bottom: 1px solid black;
+    margin-bottom: 5px;
+    padding-bottom: 5px;
+}
+.btnRemove{
+    padding: 5px;
+    background-color: brown;
+    color: white;
+    border: 0;
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+}
