@@ -11,7 +11,8 @@ body{
 
 /* Edit區塊 */
 .edit{
-    border: 1px solid red;
+    /* border: 1px solid red; */
+    margin-top: 20px;
 }
 .edit h1{
     margin: 0;
@@ -39,14 +40,17 @@ body{
 /* Info區塊 */
 .info{
     /* border: 1px solid blue; */
-    margin-top: 20px;
+    margin-top: 30px;
     position: relative;
 }
 .item{
+    position: relative;
     width: 100%;
     border-bottom: 1px solid black;
-    margin-bottom: 5px;
-    padding-bottom: 5px;
+    margin-bottom: 15px;
+}
+.itemNote{
+    line-height: .5;   /* 原字高的_倍 */
 }
 .btnRemove{
     padding: 5px;
@@ -56,4 +60,5 @@ body{
     cursor: pointer;
     position: absolute;
     right: 0;
+    bottom: 0;
 }
