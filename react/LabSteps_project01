@@ -73,3 +73,27 @@ React DOM函式ReactDOM.render()是React的程式進入點，
 什麼是virtual DOM ? 
 React先用js做出一個模擬的DOM，當畫面產生改變，React會把更改的地方放入React的 virtual DOM，
 和原本的DOM比較後，再去更改DOM上「必須更改的地方」。
+
+3.2 打開src資料夾下的index.js，其中
+
+import React from 'react';
+import ReactDOM from 'react-dom';          // 是引入用npm載下來的React和ReactDOM
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+
+root.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>          // 這段是React所使用的一種特殊Javascript語法: JSX
+);
+
+3.3 JSX語法的特別規定:
+
+3.3.1 html語法可以當作參數傳遞
+3.3.2 只能傳遞一個元素(有多個元素則要在最外部用一個標籤包起來)
+3.3.3 可以在 html 標籤中利用「{}」寫javascript 表示式({}內可以填入變數或function)
+3.3.4 直接在html標籤中給style值的寫法，例如:<h1 style = {{ fontSize: '100px', color: 'red' }} > 
+      // 外面那層括號代表裡面是javascript語法，裡面的括號表示物件型態。
+
+3.3.5 「class」屬性變成「className」，例如: <h1 className = "title" > 
+
